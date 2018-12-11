@@ -2,7 +2,7 @@
 <html>
 <style>
 	body {
-		background-image: url("image.jpeg");
+		background-image: url("image.jpg");
 		height: 100%;
 		background-position:inherit;
 		background-repeat: no-repeat;
@@ -37,33 +37,42 @@
 		width: 20%;
 		/* padding-top: 90px; */
 		padding-left: 2%;
-		padding-top: 5%;
+		/* padding-top: 5%; */
+		margin-top: 6%;
+	}
+
+	.center {
+		/* right: 0; */
+		right: 85px;
+		/*background-color:white;*/
+		color: black;
+		width: 78%;
+		/* padding-top: 5%; */
+		margin-top: 5%;
 	}
 
 	.right {
-		right: 0;
-		/*background-color:white;*/
-		color: black;
-		width: 80%;
-		padding-top: 5%;
+		width: 2%;
+		padding-top: 1%;
+		/* right: 5px; */
+		right: 48px;
+		text-align: right;
+		margin-right: -30px;
+		border-left: 1px solid lightgray;
+		position: fixed;
+		margin-top: 4%;
+		color: white;
 	}
-
-	/* .centered {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-	} */
 
 	.gmailIcon {
 		/* padding-left: 8px; */
 		padding-left: 15px;
+		color: white;
 	}
 
 	.search {
 		/* padding-left: 156px; */
-		padding-left: 133px;
+		padding-left: 75px;
 		background: transparent;
 		border: none;
 		font: normal 16px Roboto,sans-serif;
@@ -72,11 +81,13 @@
 		outline: none;
 		width: 100%;
 		box-sizing: border-box;
+		padding-right: 90px;
 	}
 
 	.appsIcon {
 		/* padding-left: 825px; */
 		padding-left: 735px;
+		color: white;
 	}
 
 	.btnCompose {
@@ -129,22 +140,11 @@
     	width: 465px;
 	}
 
-	/* .open-button {
-		background-color: #555;
-		color: white;
-		padding: 16px 20px;
-		border: none;
-		cursor: pointer;
-		opacity: 0.8;
+	.upperDiv {
+		/* padding-top: 10px; */
 		position: fixed;
-		bottom: 23px;
-		right: 28px;
-		width: 280px;
-	} */
-
-		.upperDiv {
-			padding-top: 10px;
-			position: fixed;
+		margin-bottom: 6%;
+		border-bottom: 1px solid lightgray;
 	}
 
 	.btnSend {
@@ -185,6 +185,13 @@
 
 	.notificationIcon {
 		padding-left: 15px;
+		color: white;
+	}
+
+	.searchBox {
+		width: 270%;
+		height: 90%;
+		border-radius: 5px;
 	}
 </style>
 <!-- <script>
@@ -201,30 +208,61 @@
 		<div class="upperDiv">
 			<table style="border-bottom-color: #737373;border-bottom:1px;">
 				<tr>
-					<td>Icon</td>
-					<td class="gmailIcon">Gmail Icon</td>
+					<td class="gmailIcon"><i class="fas fa-bars"></i></td>
+					<td class="gmailIcon"><i class="far fa-envelope"></i></td>
 					<td class="gmailIcon">Gmail</td>
-					<td class="search"><input type="text" placeholder="Search mail" style="width: 470%;height: 90%;border-radius: 5px;"></td>
-					<td class="appsIcon">Apps Icon</td>
-					<td class="notificationIcon">Notification Icon</td>
+					<td class="search"><input type="text" placeholder="Search mail" class="searchBox"></td>
+					<td class="appsIcon"><i class="fas fa-th"></i></td>
+					<td class="notificationIcon"><i class="fas fa-bell"></i></td>
 					<td class="gmailIcon"><button class="btnLogOut">Log Out</button></td>
 				</tr>
 			</table>
 		</div>
 		<div class="split left">
 			<div>
-				<button class="btnCompose">Compose</button>
+				<!-- <button class="btnCompose">Compose</button>
 				<ul style="padding-top: 40px;">
 					<li>Inbox</li>
 					<li>Starred</li>
 					<li>Snoozed</li>
 					<li>Sent</li>
 					<li>Drafts</li>
-				</ul>
+				</ul> -->
+				<table>
+					<tr>
+						<td><button class="btnCompose">Compose</button></td>
+					</tr>
+				</table>
+				<table style="margin-top: 13%;width: 70%;color: white;">
+					<tr>
+						<td><i class="fas fa-inbox"></i></td>
+						<td>Inbox</td>
+					</tr>
+					<tr>
+						<td><i class="far fa-star"></i></td>
+						<td>Starred</td>
+					</tr>
+					<tr>
+						<td><i class="far fa-clock"></i></td>
+						<td>Snooze</td>
+					</tr>
+					<tr>
+						<td><i class="fas fa-arrow-right"></i></td>
+						<td>Sent</td>
+					</tr>
+					<tr>
+						<td><i class="fas fa-file"></i></td>
+						<td>Drafts</td>
+					</tr>
+					<tr>
+						<td><i class="fas fa-angle-down"></i></td>
+						<td>More</td>
+					</tr>
+				</table>
 			</div>
 		</div>
-		<div class="split right">
-			<div>
+		<div class="split center">
+			<div style="background: white;">
 				<table>
 					<tr>
 						<td><input type="checkbox"></td>
@@ -252,7 +290,7 @@
 				<div> <!--  style="width: 566px;height: 700px;" -->
 					<div> <!--  style="float:right;" -->
 						<div class="composeDiv"> <!--  style="position: relative;height: 200px; width: 675px;border-bottom-color: 1px solid black;" -->
-							<table cellpadding="0" class="composeMailBox">
+							<table cellpadding="0" class="composeMailBox" style="background: white;padding-top: 0px;margin-top: 40%;">
 								<tr style="background-color:#42413F; color: white;"> <!-- border-color: 1px solid black;" -->
 									<td class="newMsg">
 										New Message
@@ -304,44 +342,56 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div>
-			<div>  style="width: 566px;height: 700px;"
-				<div>  style="float:right;" -->
-					<!-- <div class="composeDiv">  style="position: relative;height: 200px; width: 675px;border-bottom-color: 1px solid black;" -->
-						<!-- <table cellpadding="0" class="composeMailBox">
-							<tr style="background-color:#42413F; color: white;"> border-color: 1px solid black;"
-								<td> -->
-									<!-- <div class="newMsg"> -->
-										<!-- <h2 class="a3E"> -->
-											<!-- <div>New Message</div> style="width:457px" -->
-										<!-- </h2> -->
-									<!-- </div>
-								</td>
-								<td class="minimizeIcon"> -->
-									<!-- Minimimize Full Screen Close -->
-									<!-- <span class="fas fa-stroopwafel"></span> -->
-									<!-- <i class="far fa-window-minimize"></i>
-									<i class="fas fa-arrows-alt"></i>
-									<i class="fas fa-times"></i>
-								</td>
-							</tr>
-							<tr style="border-bottom-color: 1px solid black;">
-								<td style="padding-left: 18px;">
-									To
-								</td>
-								<td class="minimizeIcon" style="text-align: center !important;">
-									Cc Bcc
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input name="subjectbox" placeholder="Subject" class="subjectBox">
-								</td>
-							</tr>
-						</table>
-					</div>
+		<div class="split right">
+			<div>
+				<table>
+					<tr>
+						<i class="far fa-calendar-alt"></i>
+					</tr> <br/><br/>
+					<tr>
+						<i class="fas fa-tasks"></i>
+					</tr>
+				</table>
+			</div>
+		</div>
+	<!-- <div>
+		<div>  style="width: 566px;height: 700px;"
+			<div>  style="float:right;" -->
+				<!-- <div class="composeDiv">  style="position: relative;height: 200px; width: 675px;border-bottom-color: 1px solid black;" -->
+					<!-- <table cellpadding="0" class="composeMailBox">
+						<tr style="background-color:#42413F; color: white;"> border-color: 1px solid black;"
+							<td> -->
+								<!-- <div class="newMsg"> -->
+									<!-- <h2 class="a3E"> -->
+										<!-- <div>New Message</div> style="width:457px" -->
+									<!-- </h2> -->
+								<!-- </div>
+							</td>
+							<td class="minimizeIcon"> -->
+								<!-- Minimimize Full Screen Close -->
+								<!-- <span class="fas fa-stroopwafel"></span> -->
+								<!-- <i class="far fa-window-minimize"></i>
+								<i class="fas fa-arrows-alt"></i>
+								<i class="fas fa-times"></i>
+							</td>
+						</tr>
+						<tr style="border-bottom-color: 1px solid black;">
+							<td style="padding-left: 18px;">
+								To
+							</td>
+							<td class="minimizeIcon" style="text-align: center !important;">
+								Cc Bcc
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input name="subjectbox" placeholder="Subject" class="subjectBox">
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
+		</div>
 		</div> -->
 	</div>
 </body>
