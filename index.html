@@ -47,7 +47,7 @@
 		/* width: 85%; */
 		width: 1224px;
 		/* padding-top: 5%; */
-		margin-top: 5%;
+		margin-top: 4%;
 		border-bottom: 1px solid lightgray;
 		left: 174px;
 	}
@@ -73,7 +73,7 @@
 
 	.search {
 		/* padding-left: 156px; */
-		padding-left: 40px;
+		padding-left: 45px;
 		background: transparent;
 		border: none;
 		font: normal 16px Roboto,sans-serif;
@@ -88,7 +88,7 @@
 	.appsIcon {
 		/* padding-left: 825px; */
 		padding-left: 735px;
-		/* color: white; */
+		color: white;
 	}
 
 	.btnCompose {
@@ -186,13 +186,21 @@
 
 	.notificationIcon {
 		padding-left: 15px;
-		/* color: white; */
+		color: white;
 	}
 
 	.searchBox {
 		width: 250%;
 		height: 90%;
 		border-radius: 5px;
+	}
+
+	.chkbox {
+		zoom: 1.5;
+	}
+
+	.spaceTD {
+		padding-left: 15px;
 	}
 </style>
 <!-- <script>
@@ -234,7 +242,7 @@
 						<td><button class="btnCompose">Compose</button></td>
 					</tr>
 				</table>
-				<table style="margin-top: 25%;width: 70%;">
+				<table style="margin-top: 25%;width: 105%;">
 					<tr>
 						<td><i class="fas fa-inbox"></i></td>
 						<td>Inbox</td>
@@ -263,41 +271,41 @@
 			</div>
 		</div>
 		<div class="split center">
-			<div style="width: 1217px;border: 1px solid lightgray;">
-				<table>
-					<tr>
-						<td><input type="checkbox"></td>
+			<div style="width: 1217px;">
+				<table style="padding-top: 1%;">
+					<tr style="line-height: 15px;">
+						<td><input type="checkbox" class="chkbox"></td>
 						<td style="padding-left: 25px;"><i class="fas fa-redo-alt"></i></td>
 						<td style="padding-left: 25px;"><i class="fas fa-ellipsis-v"></i></td>
 					</tr>
 				</table>
-				<table style="padding-top: 7px;background: white;color: black;">
+				<table style="padding-top: 7px;color: black;">
 					<tr style="line-height: 30px;">
-						<td><input type="checkbox"></td>
-						<td><i class="far fa-star"></i></td>
-						<td><b><label>PharmEasy HR</label></b></td>
+						<td><input type="checkbox" class="chkbox"></td>
+						<td class="spaceTD"><i class="far fa-star"></i></td>
+						<td class="spaceTD"><b><label>PharmEasy HR</label></b></td>
 						<!-- <td>Subject Body</td>
 						<td style="text-align: right">Dec 12</td> -->
 					</tr>
 					<tr style="line-height: 30px;">
-						<td><input type="checkbox"></td>
-						<td><i class="far fa-star"></i></td>
-						<td><label>Some text</label></td>
+						<td><input type="checkbox" class="chkbox"></td>
+						<td class="spaceTD"><i class="far fa-star"></i></td>
+						<td class="spaceTD"><label>Some text</label></td>
 					</tr>
 					<tr style="line-height: 30px;">
-						<td><input type="checkbox"></td>
-						<td><i class="far fa-star"></i></td>
-						<td><label>Some text</label></td>
+						<td><input type="checkbox" class="chkbox"></td>
+						<td class="spaceTD"><i class="far fa-star"></i></td>
+						<td class="spaceTD"><label>Some text</label></td>
 					</tr>
 					<tr style="line-height: 30px;">
-						<td><input type="checkbox"></td>
-						<td><i class="far fa-star"></i></td>
-						<td><label>Some text</label></td>
+						<td><input type="checkbox" class="chkbox"></td>
+						<td class="spaceTD"><i class="far fa-star"></i></td>
+						<td class="spaceTD"><label>Some text</label></td>
 					</tr>
 					<tr style="line-height: 30px;border-bottom: 1px solid black;">
-						<td><input type="checkbox"></td>
-						<td><i class="far fa-star"></i></td>
-						<td><label>Some text</label></td>
+						<td><input type="checkbox" class="chkbox"></td>
+						<td class="spaceTD"><i class="far fa-star"></i></td>
+						<td class="spaceTD"><label>Some text</label></td>
 					</tr>
 				</table>
 			</div>
@@ -305,7 +313,7 @@
 				<div> <!--  style="width: 566px;height: 700px;" -->
 					<div> <!--  style="float:right;" -->
 						<div class="composeDiv"> <!--  style="position: relative;height: 200px; width: 675px;border-bottom-color: 1px solid black;" -->
-							<table cellpadding="0" class="composeMailBox" style="background: white;padding-top: 0px;margin-top: 35%;">
+							<table cellpadding="0" class="composeMailBox" style="background: white;padding-top: 0px;margin-top: 8%;position: fixed;margin-left: -380px;">
 								<tr style="background-color:#42413F; color: white;"> <!-- border-color: 1px solid black;" -->
 									<td class="newMsg">
 										New Message
