@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<style>
+<style>  
 	body {
 		background-image: url("bgimg.jpg");
 		height: 100%;
@@ -57,11 +57,12 @@
 		padding-top: 1%;
 		/* right: 5px; */
 		right: 48px;
-		text-align: right;
+		/* text-align: right; */
 		margin-right: -30px;
 		border-left: 1px solid lightgray;
 		position: fixed;
-		margin-top: 4%;
+		/* margin-top: 4%; */
+        margin-top: 60px;
 		color: white;
 	}
 
@@ -73,16 +74,17 @@
 
 	.search {
 		/* padding-left: 156px; */
-		padding-left: 45px;
+		/* padding-left: 45px; */
 		background: transparent;
-		border: none;
-		font: normal 16px Roboto,sans-serif;
-		font-variant-ligatures: none;
+		/* border: none; */
+		/* font: normal 16px Roboto,sans-serif;
+		font-variant-ligatures: none; */
 		height: 46px;
 		outline: none;
 		width: 100%;
-		box-sizing: border-box;
-		padding-right: 90px;
+		/* box-sizing: border-box;
+		padding-right: 90px; */
+        padding-left: 3%;
 	}
 
 	.appsIcon {
@@ -144,8 +146,9 @@
 	.upperDiv {
 		/* padding-top: 10px; */
 		position: fixed;
-		margin-bottom: 6%;
+		/* margin-bottom: 6%; */
 		border-bottom: 1px solid lightgray;
+        /* height: 6%; */
 	}
 
 	.btnSend {
@@ -190,7 +193,7 @@
 	}
 
 	.searchBox {
-		width: 250%;
+		width: 98%;
 		height: 90%;
 		border-radius: 5px;
 	}
@@ -202,6 +205,10 @@
 	.spaceTD {
 		padding-left: 15px;
 	}
+
+    .calTask {
+        margin-left: 50%;
+    }
 </style>
 <!-- <script>
 	function openForm() {
@@ -215,7 +222,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<div class="panel panel-body">
 		<div class="upperDiv">
-			<table style="border-bottom-color: #737373;border-bottom:1px;">
+            <table> <!-- style="border-bottom-color: #737373;border-bottom:1px;" -->
 				<tr>
 					<td class="gmailIcon"><i class="fas fa-bars"></i></td>
 					<td class="gmailIcon"><i class="far fa-envelope"></i></td>
@@ -366,16 +373,8 @@
 			</div>
 		</div>
 		<div class="split right">
-			<div>
-				<table>
-					<tr>
-						<i class="far fa-calendar-alt"></i>
-					</tr> <br/><br/>
-					<tr>
-						<i class="fas fa-tasks"></i>
-					</tr>
-				</table>
-			</div>
+			<div class="calTask"><i class="far fa-calendar-alt"></i></div><br>
+            <div class="calTask"><i class="fas fa-tasks"></i></div>
 		</div>
 	</div>
 </body>
