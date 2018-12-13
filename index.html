@@ -155,6 +155,11 @@
     .spaceTD {
         padding-left: 15px;
     }
+
+    .leftDiv {
+        padding-left: 10%;
+        /* padding-right: 10%; */
+    }
 </style>
 <script>
     function changeBackground(x)
@@ -188,38 +193,14 @@
         </div>
         <div class="split left">
             <div>
-                <table>
-                    <tr>
-                        <td><button class="btnCompose">Compose</button></td>
-                    </tr>
-                </table>
-                <table style="margin-top: 25%;width: 105%;">
-                    <tr>
-                        <td><i class="fas fa-inbox"></i></td>
-                        <td>Inbox</td>
-                    </tr>
-                    <tr>
-                        <td><i class="far fa-star"></i></td>
-                        <td>Starred</td>
-                    </tr>
-                    <tr>
-                        <td><i class="far fa-clock"></i></td>
-                        <td>Snooze</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-arrow-right"></i></td>
-                        <td>Sent</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-file"></i></td>
-                        <td>Drafts</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-angle-down"></i></td>
-                        <td>More</td>
-                    </tr>
-                </table>
+                <button class="btnCompose">Compose</button>
             </div>
+            <div style="margin-top: 30%;"><i class="fas fa-inbox leftDiv" style="padding-right: 10%;"></i>Inbox</div>
+            <div style="margin-top: 8%;"><i class="far fa-star leftDiv" style="padding-right: 10%;"></i>Starred</div>
+            <div style="margin-top: 8%;"><i class="far fa-clock leftDiv" style="padding-right: 12%"></i>Snooze</div>
+            <div style="margin-top: 8%;"><i class="fas fa-arrow-right leftDiv" style="padding-right: 13%;"></i>Sent</div>
+            <div style="margin-top: 8%;"><i class="fas fa-file leftDiv" style="padding-right: 15%;"></i>Drafts</div>
+            <div style="margin-top: 8%;"><i class="fas fa-angle-down leftDiv" style="padding-right: 17%;"></i>More</div>
         </div>
         <div class="split center">
             <div style="width: 1230px;">
