@@ -47,27 +47,16 @@
         padding-left: 15px;
     }
 
-    .search {
-        height: 46px;
-        outline: none;
-        width: 100%;
-        padding-left: 3%;
-    }
-
     .appsIcon {
-        padding-left: 735px;
+        padding-left: 69%;
         color: white;
     }
 
     .btnCompose {
         border-radius: 24px;
         color: #3c4043;
-        display: inline-flex;
-        font-weight: 500;
         height: 48px;
-        min-width: 56px;
         padding: 0 24px 0 25px;
-        text-transform: none;
         position: fixed;
         margin-top: -15px;
     }
@@ -141,8 +130,16 @@
         color: white;
     }
 
+    .search {
+        height: 46px;
+        outline: none;
+        width: 100%;
+        padding-left: 5%;
+    }
+    
     .searchBox {
-        width: 98%;
+        /* width: 98%; */
+        /* width: 410%; */
         height: 90%;
         border-radius: 5px;
         background: transparent;
@@ -179,7 +176,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <div class="panel panel-body">
         <div class="upperDiv">
-            <table>
+            <div style="display: inline-flex;">
+                <i class="fas fa-bars" style="padding-left:15px;"></i>
+                <i class="far fa-envelope gmailIcon"></i>Gmail
+                <span class="search"><input type="text" id="txtSearch" placeholder="Search mail" class="searchBox" onfocus="changeBackground(this)" onblur="regularBackground(this)"></span>
+                <i class="fas fa-th appsIcon"></i>
+                <i class="fas fa-bell notificationIcon"></i>
+                <span class="gmailIcon"><button class="btnLogOut">Log Out</button></span>
+            </div>
+            <!-- <table>
                 <tr>
                     <td class="gmailIcon"><i class="fas fa-bars"></i></td>
                     <td class="gmailIcon"><i class="far fa-envelope"></i></td>
@@ -189,12 +194,10 @@
                     <td class="notificationIcon"><i class="fas fa-bell"></i></td>
                     <td class="gmailIcon"><button class="btnLogOut">Log Out</button></td>
                 </tr>
-            </table>
+            </table> -->
         </div>
         <div class="split left">
-            <div>
-                <button class="btnCompose">Compose</button>
-            </div>
+            <div><button class="btnCompose">Compose</button></div>
             <div style="margin-top: 30%;"><i class="fas fa-inbox leftDiv" style="padding-right: 10%;"></i>Inbox</div>
             <div style="margin-top: 8%;"><i class="far fa-star leftDiv" style="padding-right: 10%;"></i>Starred</div>
             <div style="margin-top: 8%;"><i class="far fa-clock leftDiv" style="padding-right: 12%"></i>Snooze</div>
