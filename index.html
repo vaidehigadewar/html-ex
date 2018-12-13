@@ -44,8 +44,8 @@
 	.center {
 		/* background-color:; */
 		/* color: white; */
-		/* width: 85%; */
-		width: 1224px;
+		width: 86%;
+		/* width: 1224px; */
 		/* padding-top: 5%; */
 		margin-top: 4%;
 		border-bottom: 1px solid lightgray;
@@ -53,17 +53,23 @@
 	}
 
 	.right {
-		width: 2%;
-		padding-top: 1%;
+		/*width: 2%;
+		padding-top: 1%;*/
 		/* right: 5px; */
-		right: 48px;
+		/* right: 48px; */
 		/* text-align: right; */
-		margin-right: -30px;
+		/* margin-right: -30px;
 		border-left: 1px solid lightgray;
-		position: fixed;
+		position: fixed; */
 		/* margin-top: 4%; */
-        margin-top: 60px;
+        /*margin-top: 60px;*/
 		color: white;
+        width: 2%;
+        padding-top: 1%;
+        margin-left: 97%;
+        border-left: 1px solid lightgray;
+        margin-top: 60px;
+        padding-left: 10px;
 	}
 
 	.gmailIcon {
@@ -205,10 +211,6 @@
 	.spaceTD {
 		padding-left: 15px;
 	}
-
-    .calTask {
-        margin-left: 50%;
-    }
 </style>
 <!-- <script>
 	function openForm() {
@@ -278,7 +280,7 @@
 			</div>
 		</div>
 		<div class="split center">
-			<div style="width: 1217px;">
+			<div style="width: 1230px;">
 				<table style="padding-top: 1%;">
 					<tr style="line-height: 15px;">
 						<td><input type="checkbox" class="chkbox"></td>
@@ -316,65 +318,13 @@
 					</tr>
 				</table>
 			</div>
-			<div>
-				<div> <!--  style="width: 566px;height: 700px;" -->
-					<div> <!--  style="float:right;" -->
-						<div class="composeDiv"> <!--  style="position: relative;height: 200px; width: 675px;border-bottom-color: 1px solid black;" -->
-							<table cellpadding="0" class="composeMailBox" style="background: white;padding-top: 0px;margin-top: 8%;position: fixed;margin-left: -380px;">
-								<tr style="background-color:#42413F; color: white;"> <!-- border-color: 1px solid black;" -->
-									<td class="newMsg">
-										New Message
-									</td>
-									<td class="minimizeIcon">
-										<!-- Minimimize Full Screen Close -->
-										<!-- <span class="fas fa-stroopwafel"></span> -->
-										<i class="far fa-window-minimize"></i>
-										<i class="fas fa-arrows-alt"></i>
-										<i class="fas fa-times"></i>
-									</td>
-								</tr>
-								<tr style="color:#777;"> <!--style="border-bottom-color: 1px solid black;" -->
-									<td class="newMsg"> <!-- style="padding-left: 18px;" -->
-										Recipients
-										<!-- <input name="recipients" placeholder="Recipients" class="subjectBox"> -->
-									</td>
-									<td class="minimizeIcon">
-										Cc Bcc
-									</td>
-								</tr>
-								<tr>
-									<td class="newMsg" style="color:#777;">
-										<input name="subjectbox" placeholder="Subject" style="border:none;"> <!--class="subjectBox"-->
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<textarea name="mailBody" id="" cols="50" rows="20" style="border-style: none;"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<button class="btnSend">Send</button>
-										<i class="fas fa-paperclip" title="Attach files" style="color:#B6B6B6 !important;"></i> 
-										<i class="fas fa-link" title="insert links" style="color:#C0C0C0 !important;"></i> 
-										<i class="far fa-smile" title="Insert Emoji" style="color:#BCBCBC !important;"></i> 
-										<i class="fab fa-google-drive" title="Insert files using Drive" style="color:#B0B0B0 !important;"></i> 
-										<i class="far fa-image" title="Insert Image" style="color:#A9A9A9 !important;"></i>
-									</td>
-									<td class="binIcon">
-										<i class="fas fa-trash" title="Discard draft" style="color:#737373 !important;"></i> 
-										<i class="fas fa-ellipsis-v" title="More options" style="color:#BDBEBE;"></i>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="composeMailBox">
+
+            </div>
 		</div>
 		<div class="split right">
-			<div class="calTask"><i class="far fa-calendar-alt"></i></div><br>
-            <div class="calTask"><i class="fas fa-tasks"></i></div>
+			<div><i class="far fa-calendar-alt"></i></div><br>
+            <div><i class="fas fa-tasks"></i></div>
 		</div>
 	</div>
 </body>
