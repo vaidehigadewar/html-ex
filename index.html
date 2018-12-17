@@ -37,7 +37,7 @@
         color: white;
         width: 2%;
         padding-top: 1%;
-        margin-left: 97%;
+        right: 0;
         border-left: 1px solid lightgray;
         margin-top: 62px;
         padding-left: 10px;
@@ -48,8 +48,9 @@
     }
 
     .appsIcon {
-        padding-left: 611px;
+        /* padding-left: 585px; */
         color: white;
+        /* padding-top: 10px; */
     }
 
     .btnCompose {
@@ -94,6 +95,8 @@
         height: 6%;
         padding-top: 5px;
         display: inline-flex;
+        align-items: center;
+        width: 100%;
     }
 
     .btnSend {
@@ -126,16 +129,17 @@
     }
 
     .search {
-        height: 46px;
         outline: none;
-        padding-left: 70px;
+        padding-left: 60px;
+        flex-grow: 1;
     }
     
     .searchBox {
         width: 500px;
-        height: 90%;
+        height: 35px;
         border-radius: 5px;
         background: transparent;
+        padding-left: 25px;
     }
 
     .chkbox {
@@ -148,7 +152,6 @@
 
     .leftDiv {
         padding-left: 10%;
-        /* padding-right: 10%; */
     }
 
     .arcIcon {
@@ -262,8 +265,6 @@
     }
 
     .minimizeIcon {
-        /* width: 65px;
-        text-align: center; */
         padding-left: 173px;
     }
 
@@ -333,6 +334,15 @@
         color:#BDBEBE;
         padding-left: 162px;
     }
+
+    .taskIcon {
+        padding-top: 15px;
+    }
+
+    .logOutBtn {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 </style>
 <script>
     function changeBackground(x)
@@ -352,14 +362,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <div class="panel panel-body">
         <div class="upperDiv">
-            <div style="display: inline-flex;">
-                <i class="fas fa-bars mainMenuPadding"></i>
+            <div class="mainMenuPadding">
+                <i class="fas fa-bars"></i>
                 <i class="far fa-envelope gmailIcon"></i>Gmail
-                <span class="search"><input type="text" id="txtSearch" placeholder="Search mail" class="searchBox" onfocus="changeBackground(this)" onblur="regularBackground(this)"></span>
-                <i class="fas fa-th appsIcon"></i>
-                <i class="fas fa-bell notificationIcon"></i>
-                <span class="gmailIcon"><button class="btnLogOut">Log Out</button></span>
             </div>
+            <div class="search">
+                <input type="text" id="txtSearch" placeholder="Search mail" class="searchBox" onfocus="changeBackground(this)" onblur="regularBackground(this)">
+            </div>
+            <i class="fas fa-th appsIcon"></i>
+            <i class="fas fa-bell notificationIcon"></i>
+            <span class="logOutBtn"><button class="btnLogOut">Log Out</button></span>
         </div>
         <div class="split left">
             <button class="btnCompose">Compose</button>
@@ -463,8 +475,8 @@
             </div>
         </div>
         <div class="split right">
-            <div><i class="far fa-calendar-alt"></i></div><br>
-            <div><i class="fas fa-tasks"></i></div>
+            <i class="far fa-calendar-alt"></i>
+            <i class="fas fa-tasks taskIcon"></i>
         </div>
     </div>
 </body>
