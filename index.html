@@ -68,27 +68,17 @@
     }
 
     .newMsg {
-        margin-left: 16px;
-        font-weight: 500;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        height: auto;
-        line-height: 10px;
-        padding-left: 10px;
-        padding-right: 0;
-    }
-
-    .minimizeIcon {
-        width: 65px;
-        text-align: center;
+        background-color:#42413F;
+        color: white;
+        padding: 10px 0px 10px 10px;
     }
 
     .composeMailBox {
-        margin-left: 68%;
+        margin-left: 70%;
         display: inline-table;
         background: white;
         padding-top: 0%;
-        margin-top: 120px;
+        margin-top: 145px;
         position: absolute;
     }
 
@@ -113,6 +103,8 @@
         background-color: #1a73e8;
         color: #fff;
         border: none;
+        margin-left: 1%;
+        margin-bottom: 2px;
     }
 
     .btnLogOut {
@@ -264,6 +256,83 @@
     .mainMenuPadding  {
         padding-left:15px;
     }
+
+    .fullScreenIcon {
+        padding-left: 10px;
+    }
+
+    .minimizeIcon {
+        /* width: 65px;
+        text-align: center; */
+        padding-left: 173px;
+    }
+
+    .recipients {
+        padding: 10px 0px 10px 10px;
+        border-bottom-color: 1px solid lightgray;
+    }
+
+    .composeSubject {
+        padding: 10px 0px 10px 10px;
+        border-bottom-color: 1px solid lightgray;
+    }
+
+    .comSubTxt {
+        width: 345px;
+        height: 20px;
+        border:none;
+    }
+
+    .comMailBody {
+        width: 356px;
+        height: 241px;
+        border: none;
+    }
+    .spanRecipient {
+        margin-left:-21%;
+    }
+
+    .txtTo {
+        width: 305px;
+        visibility: visible;
+        border: none;
+    }
+
+    .txtCcBcc {
+        width: 30px;
+        visibility: visible;
+        border: none;
+    }
+
+    .attachFiles {
+        color:#B6B6B6;
+    }
+
+    .insertLinks {
+        color:#C0C0C0;
+    }
+
+    .emoji {
+        color:#BCBCBC;
+    }
+
+    .drive {
+        color:#B0B0B0;
+    }
+
+    .insertImage {
+        color:#A9A9A9;
+    }
+
+    .discardDraft {
+        color:#737373;
+        padding-left: 135px;
+    }
+
+    .moreOptions {
+        color:#BDBEBE;
+        padding-left: 162px;
+    }
 </style>
 <script>
     function changeBackground(x)
@@ -362,48 +431,35 @@
                 </div>
             </div>
             <div class="composeMailBox">
-                <table cellpadding="0">
-                    <tr style="background-color:#42413F; color: white;">
-                        <td class="newMsg">New Message</td>
-                        <td class="minimizeIcon">
-                            <i class="far fa-window-minimize"></i>
-                            <i class="fas fa-arrows-alt"></i>
-                            <i class="fas fa-times"></i>
-                        </td>
-                    </tr>
-                    <tr style="color:#777;">
-                        <td class="newMsg">
-                            Recipients
-                        </td>
-                        <td class="minimizeIcon">
-                            Cc Bcc
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="newMsg" style="color:#777;">
-                            <input name="subjectbox" placeholder="Subject" style="border:none;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <textarea name="mailBody" id="" cols="50" rows="20" style="border-style: none;"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                    <td>
+                <form action="" id="frmComposeMail">
+                    <div class="newMsg newMsgBg">New Messaage
+                        <i class="far fa-window-minimize minimizeIcon"></i>
+                        <i class="fas fa-arrows-alt fullScreenIcon"></i>
+                        <i class="fas fa-times fullScreenIcon"></i>
+                    </div>
+                    <div class="recipients">Recipients
+                        <span class="spanRecipient">
+                            <input type="text" placeholder="To" id="txtTo" class="txtTo">
+                            <input type="text" placeholder="Cc Bcc" id="txtCc" class="txtCcBcc">
+                        </span>
+                    </div>
+                    <div class="composeSubject">
+                        <input type="text" name="subjectBox" placeholder="Subject" class="comSubTxt">
+                    </div>
+                    <div>
+                        <textarea name="mailBody" id="txtMailBody" cols="50" rows="20" class="comMailBody"></textarea>
+                    </div>
+                    <div>
                         <button class="btnSend">Send</button>
-                        <i class="fas fa-paperclip" title="Attach files" style="color:#B6B6B6"></i> 
-                        <i class="fas fa-link" title="insert links" style="color:#C0C0C0"></i> 
-                        <i class="far fa-smile" title="Insert Emoji" style="color:#BCBCBC"></i> 
-                        <i class="fab fa-google-drive" title="Insert files using Drive" style="color:#B0B0B0"></i> 
-                        <i class="far fa-image" title="Insert Image" style="color:#A9A9A9"></i>
-                    </td>
-                    <td class="binIcon">
-                        <i class="fas fa-trash" title="Discard draft" style="color:#737373"></i> 
-                        <i class="fas fa-ellipsis-v" title="More options" style="color:#BDBEBE;"></i>
-                    </td>
-                    </tr>
-                </table>
+                        <i class="fas fa-paperclip attachFiles" title="Attach files"></i> 
+                        <i class="fas fa-link insertLinks" title="insert links"></i> 
+                        <i class="far fa-smile emoji" title="Insert Emoji"></i> 
+                        <i class="fab fa-google-drive drive" title="Insert files using Drive"></i> 
+                        <i class="far fa-image insertImage" title="Insert Image"></i>
+                        <i class="fas fa-trash binIcon discardDraft" title="Discard draft"></i> 
+                        <i class="fas fa-ellipsis-v moreOptions" title="More options"></i>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="split right">
