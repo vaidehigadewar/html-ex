@@ -12,16 +12,16 @@
     .split {
         height: 100%;
         position: fixed;
-        z-index: 1;
+        /* z-index: 1;
         top: 0;
-        overflow-x: hidden;
+        overflow-x: hidden; */
     }
 
     .left {
-        left: 0;
+        /* left: 0; */
         color: black;
         width: 10%;
-        padding-left: 2%;
+        padding-left: 1%;
         padding-top: 2%;
         margin-top: 3%;
     }
@@ -149,6 +149,8 @@
     }
 
     .leftDiv {
+        /* padding-left: 10%; */
+        margin-top: 8%;
         padding-left: 10%;
     }
 
@@ -373,12 +375,14 @@
         </div>
         <div class="split left">
             <button class="btnCompose">Compose</button>
-            <div class="leftInbox"><i class="fas fa-inbox leftDiv inboxPadding"></i>Inbox</div>
-            <div class="leftPanel"><i class="far fa-star leftDiv inboxPadding"></i>Starred</div>
-            <div class="leftPanel"><i class="far fa-clock leftDiv snoozePadding"></i>Snooze</div>
-            <div class="leftPanel"><i class="fas fa-arrow-right leftDiv sentPadding"></i>Sent</div>
-            <div class="leftPanel"><i class="fas fa-file leftDiv draftsPadding"></i>Drafts</div>
-            <div class="leftPanel"><i class="fas fa-angle-down leftDiv morePadding"></i>More</div>
+            <div class="leftDiv">
+                <i class="fas fa-inbox inboxPadding"></i>Inbox <br>
+                <i class="far fa-star inboxPadding"></i>Starred <br>
+                <i class="far fa-clock snoozePadding"></i>Snooze <br>
+                <i class="fas fa-arrow-right sentPadding"></i>Sent <br>
+                <i class="fas fa-file draftsPadding"></i>Drafts <br>
+                <i class="fas fa-angle-down morePadding"></i>More
+            </div>
         </div>
         <div class="split center">
             <div class="upperMailDiv">
