@@ -9,12 +9,12 @@
         background-size: cover;
     }
     
-    .split {
+    /* .split {
         position: fixed;
         /* z-index: 1;
         top: 0;
-        overflow-x: hidden; */
-    }
+        overflow-x: hidden;
+    } */
 
     .left {
         color: black;
@@ -25,8 +25,8 @@
 
     .center {
         width: 85%;
-        margin-top: -12%;
-        left: 166px;
+        /* margin-top: -12%; */
+        /* left: 166px; */
         height: 92%;
     }
 
@@ -36,8 +36,6 @@
         padding-top: 1%;
         right: 0;
         border-left: 1px solid lightgray;
-        margin-top: -183px;
-        height: 92%;
         padding-right: 1%;
     }
 
@@ -65,16 +63,16 @@
     .newMsg {
         background-color:#42413F;
         color: white;
-        padding: 10px 0px 10px 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
     }
 
     .composeMailBox {
-        margin-left: 70%;
-        display: inline-table;
-        background: white;
-        padding-top: 0%;
-        margin-top: 145px;
-        position: absolute;
+        position: fixed;
+        background-color: white;
+        right: 75px;
+        bottom:0;
     }
 
     .subjectBox {
@@ -151,13 +149,13 @@
 
     .arcIcon {
         visibility: hidden;
-        margin-left: 145px;
+        margin-left: 120px;
         position: fixed;
     }
 
     .archiveIcon {
         visibility: hidden;
-        margin-left: 185px;
+        margin-left: 160px;
         position: fixed;
     }
 
@@ -169,11 +167,11 @@
     .mailBody {
         line-height: 30px;
         background-color: #FFFFFF;
-        color: #202124;
+        color: black;
     }
 
     .mailBgOpa {
-        opacity: 0.5;
+        opacity: 0.7;
     }
 
     .unreadMailBg {
@@ -197,7 +195,7 @@
     .mailInbox {
         color: black;
         display: table;
-        width: 100%;
+        width: 99%;
         padding: 2px;
     }
 
@@ -256,44 +254,50 @@
     }
 
     .minimizeIcon {
-        padding-left: 173px;
+        padding-left: 45%;
     }
 
     .recipients {
         padding: 10px 0px 10px 10px;
-        border-bottom-color: 1px solid lightgray;
+        width: 97%;
     }
 
     .composeSubject {
-        padding: 10px 0px 10px 10px;
-        border-bottom-color: 1px solid lightgray;
+        padding: 10px 0px 10px 6px;
+        width: 97%;
     }
 
     .comSubTxt {
-        width: 345px;
-        height: 20px;
+        width: 98%;
+        height: 30px;
         border:none;
     }
 
     .comMailBody {
-        width: 356px;
+        width: 96%;
         height: 241px;
         border: none;
-    }
-    .spanRecipient {
-        margin-left:-21%;
+        margin-left: 1px;
+        padding-left: 10px;
     }
 
+    /* .spanRecipient {
+        margin-left:-21%;
+    } */
+
     .txtTo {
-        width: 305px;
+        width: 78%;
         visibility: visible;
         border: none;
+        margin-left: -72px;
+        height: 30px;
     }
 
     .txtCcBcc {
-        width: 30px;
+        width: 18%;
         visibility: visible;
         border: none;
+        height: 30px;
     }
 
     .attachFiles {
@@ -318,16 +322,17 @@
 
     .discardDraft {
         color:#737373;
-        padding-left: 135px;
+        margin-left: 25%;
     }
 
     .moreOptions {
         color:#BDBEBE;
-        padding-left: 162px;
+        margin-left: 40%;
     }
 
     .taskIcon {
         padding-top: 15px;
+        padding-left: 20px;
     }
 
     .logOutBtn {
@@ -335,16 +340,16 @@
         padding-right: 15px;
     }
 
-    .calTaskIcon {
-        padding-left: 10px;
+    .calendarIcon {
+        padding-left: 20px;
     }
 
     .mailBodyUnRDate {
-        margin-left: 15%;
+        margin-left: 13%;
     }
 
     .mailBodyDate {
-        margin-left: 18%;
+        margin-left: 198px;
     }
 
     .mailBody:hover .mailBodyDate,
@@ -355,6 +360,7 @@
     .mainDiv {
         width: 100%;
         height: 100%;
+        display: flex;
     }
 </style>
 <script>
@@ -398,7 +404,7 @@
                     <div><i class="fas fa-angle-down morePadding"></i>More</div>
                 </div>
             </div>
-            <div class="split center">
+            <div class="center">
                 <div class="upperMailDiv">
                     <div>
                         <span class="chkbxMargin"><input type="checkbox" class="chkbox"></span>
@@ -466,43 +472,49 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
+                        <div class="mailBody unreadMailBg">
+                            <input type="checkbox" class="chkbox">
+                            <i class="far fa-star spaceTD"></i>
+                            <span class="spaceTD"><b>PharmEasy HR</b></span>
+                            <span class="subject"><b>PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</b></span>
+                            <span class="arcIcon">
+                                <i class="fas fa-archive"></i>
+                                <i class="fas fa-trash trashIcon"></i>
+                                <i class="far fa-clock trashIcon"></i>
+                            </span>
+                            <span class="mailBodyUnRDate"><b>Dec 14</b></span>
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="composeMailBox">
-                    <form action="" id="frmComposeMail">
-                        <div class="newMsg newMsgBg">New Messaage
-                            <i class="far fa-window-minimize minimizeIcon"></i>
-                            <i class="fas fa-arrows-alt fullScreenIcon"></i>
-                            <i class="fas fa-times fullScreenIcon"></i>
-                        </div>
-                        <div class="recipients">Recipients
-                            <span class="spanRecipient">
-                                <input type="text" placeholder="To" id="txtTo" class="txtTo">
-                                <input type="text" placeholder="Cc Bcc" id="txtCc" class="txtCcBcc">
-                            </span>
-                        </div>
-                        <div class="composeSubject">
-                            <input type="text" name="subjectBox" placeholder="Subject" class="comSubTxt">
-                        </div>
-                        <div>
-                            <textarea name="mailBody" id="txtMailBody" cols="50" rows="20" class="comMailBody"></textarea>
-                        </div>
-                        <div>
-                            <button class="btnSend">Send</button>
-                            <i class="fas fa-paperclip attachFiles" title="Attach files"></i> 
-                            <i class="fas fa-link insertLinks" title="insert links"></i> 
-                            <i class="far fa-smile emoji" title="Insert Emoji"></i> 
-                            <i class="fab fa-google-drive drive" title="Insert files using Drive"></i> 
-                            <i class="far fa-image insertImage" title="Insert Image"></i>
-                            <i class="fas fa-trash binIcon discardDraft" title="Discard draft"></i> 
-                            <i class="fas fa-ellipsis-v moreOptions" title="More options"></i>
-                        </div>
-                    </form>
-                </div> -->
+                <form action="" id="frmComposeMail" class="composeMailBox">
+                    <div class="newMsg">New Message
+                        <i class="far fa-window-minimize minimizeIcon"></i>
+                        <i class="fas fa-arrows-alt fullScreenIcon"></i>
+                        <i class="fas fa-times fullScreenIcon"></i>
+                    </div>
+                    <div class="recipients">Recipients
+                        <input type="text" placeholder="To" id="txtTo" class="txtTo">
+                        <input type="text" placeholder="Cc Bcc" id="txtCc" class="txtCcBcc">
+                    </div>
+                    <div class="composeSubject">
+                        <input type="text" name="subjectBox" placeholder="Subject" class="comSubTxt">
+                    </div>
+                    <textarea name="mailBody" id="txtMailBody" cols="50" rows="20" class="comMailBody"></textarea>
+                    <div>
+                        <button class="btnSend">Send</button>
+                        <i class="fas fa-paperclip attachFiles" title="Attach files"></i> 
+                        <i class="fas fa-link insertLinks" title="insert links"></i> 
+                        <i class="far fa-smile emoji" title="Insert Emoji"></i> 
+                        <i class="fab fa-google-drive drive" title="Insert files using Drive"></i> 
+                        <i class="far fa-image insertImage" title="Insert Image"></i>
+                        <i class="fas fa-trash binIcon discardDraft" title="Discard draft"></i> 
+                        <i class="fas fa-ellipsis-v moreOptions" title="More options"></i>
+                    </div>
+                </form>
             </div>
-            <div class="split right">
-                <i class="far fa-calendar-alt calTaskIcon"></i>
-                <i class="fas fa-tasks taskIcon calTaskIcon"></i>
+            <div class="right">
+                <i class="far fa-calendar-alt calendarIcon"></i>
+                <i class="fas fa-tasks taskIcon"></i>
             </div>
         </div>
     </div>
