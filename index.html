@@ -7,6 +7,7 @@
         background-position:inherit;
         background-repeat: no-repeat;
         background-size: cover;
+        margin: 0;
     }
     
     /* .split {
@@ -25,8 +26,6 @@
 
     .center {
         width: 85%;
-        /* margin-top: -12%; */
-        /* left: 166px; */
         height: 92%;
     }
 
@@ -44,7 +43,7 @@
     }
 
     .appsIcon {
-        color: white;
+        color: black;
     }
 
     .btnCompose {
@@ -117,7 +116,7 @@
 
     .notificationIcon {
         padding-left: 15px;
-        color: white;
+        color: black;
     }
 
     .search {
@@ -247,7 +246,6 @@
 
     .mainMenuPadding  {
         padding-left:15px;
-        color: white;
     }
 
     .fullScreenIcon {
@@ -281,10 +279,6 @@
         margin-left: 1px;
         padding-left: 10px;
     }
-
-    /* .spanRecipient {
-        margin-left:-21%;
-    } */
 
     .txtTo {
         width: 78%;
@@ -363,6 +357,20 @@
         height: 100%;
         display: flex;
     }
+
+    .chkDiv {
+        width: 99%;
+        padding-left: 3px;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
+
+    .btnRdUnR {
+        width: 60px;
+        margin-left: 2%;
+        height: 30px;
+        border-radius: 4px;
+    }
 </style>
 <script>
     function changeBackground(x)
@@ -377,6 +385,8 @@
 </script>
 <head>
     <title>Test Page</title>
+    <script type="text/javascript" src="file:///Users/vaidehi/Desktop/html/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="file:///Users/vaidehi/Desktop/html/jqueryfunctions.js"></script>
 </head>
 <body>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -407,10 +417,12 @@
             </div>
             <div class="center">
                 <div class="upperMailDiv">
-                    <div>
+                    <div class="chkDiv">
                         <span class="chkbxMargin"><input type="checkbox" class="chkbox"></span>
                         <i class="fas fa-redo-alt refresh"></i>
                         <i class="fas fa-ellipsis-v refresh"></i>
+                        <button id="btnRead" class="btnRdUnR">Read</button>
+                        <button id="btnUnRead" class="btnRdUnR">Unread</button>
                     </div>
                     <div class="mailInbox">
                         <div class="mailBody unreadMailBg">
@@ -489,9 +501,9 @@
                 </div>
                 <form action="" id="frmComposeMail" class="composeMailBox">
                     <div class="newMsg">New Message
-                        <i class="far fa-window-minimize minimizeIcon"></i>
+                        <i id="minIcon" class="far fa-window-minimize minimizeIcon"></i>
                         <i class="fas fa-arrows-alt fullScreenIcon"></i>
-                        <i class="fas fa-times fullScreenIcon"></i>
+                        <i id="closeIcon" class="fas fa-times fullScreenIcon"></i>
                     </div>
                     <div class="recipients">Recipients
                         <input type="text" placeholder="To" id="txtTo" class="txtTo">
