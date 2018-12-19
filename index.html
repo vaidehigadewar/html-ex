@@ -141,6 +141,16 @@
         padding-left: 15px;
     }
 
+    .mailFromUnread {
+        font-weight: bold;
+        padding-left: 15px;
+    }
+
+    .mailFromRead {
+        font-weight: normal;
+        padding-left: 15px;
+    }
+
     .leftDiv {
         margin-top: 8%;
         padding-left: 10%;
@@ -149,13 +159,13 @@
     .arcIcon {
         visibility: hidden;
         margin-left: 120px;
-        position: fixed;
+        position: absolute;
     }
 
     .archiveIcon {
         visibility: hidden;
         margin-left: 160px;
-        position: fixed;
+        position: absolute;
     }
 
     .trashIcon {
@@ -185,10 +195,22 @@
 
     .subject {
         padding-left: 100px;
+        font-weight: bold;
+    }
+
+    .readSub {
+        margin-left: 12%;
+        font-weight: normal;
     }
 
     .subjectRead {
         margin-left: 12%;
+        font-weight: normal;
+    }
+
+    .unreadSubj {
+        padding-left: 100px;
+        font-weight: bold;
     }
 
     .mailInbox {
@@ -249,11 +271,13 @@
     }
 
     .fullScreenIcon {
-        padding-left: 10px;
+        padding-left: 7px;
+        cursor: pointer;
     }
 
     .minimizeIcon {
-        padding-left: 45%;
+        padding-left: 43%;
+        cursor: pointer;
     }
 
     .recipients {
@@ -341,6 +365,7 @@
 
     .mailBodyUnRDate {
         margin-left: 13%;
+        font-weight: bold;
     }
 
     .mailBodyDate {
@@ -370,6 +395,21 @@
         margin-left: 2%;
         height: 30px;
         border-radius: 4px;
+    }
+
+    .closeMailBox {
+        display: none;
+    }
+
+    .read {
+        opacity: 0.7;
+        /* padding-left: 100px; */
+        font-weight: normal;
+    }
+
+    .unread {
+        opacity: 0.9;
+        font-weight: bold;
     }
 </style>
 <script>
@@ -425,22 +465,22 @@
                         <button id="btnUnRead" class="btnRdUnR">Unread</button>
                     </div>
                     <div class="mailInbox">
-                        <div class="mailBody unreadMailBg">
-                            <input type="checkbox" class="chkbox">
+                        <div id="div1" class="mailBody unreadMailBg">
+                            <input id="chkbx1" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="spaceTD"><b>PharmEasy HR</b></span>
-                            <span class="subject"><b>PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</b></span>
+                            <span class="mailFromUnread">PharmEasy HR</span>
+                            <span class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
                             <span class="arcIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
                                 <i class="far fa-clock trashIcon"></i>
                             </span>
-                            <span class="mailBodyUnRDate"><b>Dec 14</b></span>
+                            <span class="mailBodyUnRDate">Dec 14</span>
                         </div>
-                        <div class="mailBody mailBgOpa">
-                            <input type="checkbox" class="chkbox">
+                        <div id="div2" class="mailBody mailBgOpa">
+                            <input id="chkbx2" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="spaceTD">Some text</span>
+                            <span class="mailFromRead">Some text</span>
                             <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
@@ -449,10 +489,10 @@
                             </span>
                             <span class="mailBodyDate">Dec 14</span>
                         </div>
-                        <div class="mailBody mailBgOpa">
-                            <input type="checkbox" class="chkbox">
+                        <div id="div3" class="mailBody mailBgOpa">
+                            <input id="chkbx3" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="spaceTD">Some text</span>
+                            <span class="mailFromRead">Some text</span>
                             <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
@@ -461,10 +501,10 @@
                             </span>
                             <span class="mailBodyDate">Dec 10</span>
                         </div>
-                        <div class="mailBody mailBgOpa">
-                            <input type="checkbox" class="chkbox">
+                        <div id="div4" class="mailBody mailBgOpa">
+                            <input id="chkbx4" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="spaceTD">Some text</span>
+                            <span class="mailFromRead">Some text</span>
                             <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
@@ -473,10 +513,10 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
-                        <div class="mailBody mailBgOpa">
-                            <input type="checkbox" class="chkbox">
+                        <div id="div5" class="mailBody mailBgOpa">
+                            <input id="chkbx5" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="spaceTD">Some text</span>
+                            <span class="mailFromRead">Some text</span>
                             <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
@@ -485,43 +525,45 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
-                        <div class="mailBody unreadMailBg">
-                            <input type="checkbox" class="chkbox">
+                        <div id="div1" class="mailBody unreadMailBg">
+                            <input id="chkbx6" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="spaceTD"><b>PharmEasy HR</b></span>
-                            <span class="subject"><b>PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</b></span>
+                            <span class="mailFromUnread">PharmEasy HR</span>
+                            <span class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
                             <span class="arcIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
                                 <i class="far fa-clock trashIcon"></i>
                             </span>
-                            <span class="mailBodyUnRDate"><b>Dec 14</b></span>
+                            <span class="mailBodyUnRDate">Dec 14</span>
                         </div>
                     </div>
                 </div>
                 <form action="" id="frmComposeMail" class="composeMailBox">
                     <div class="newMsg">New Message
-                        <i id="minIcon" class="far fa-window-minimize minimizeIcon"></i>
-                        <i class="fas fa-arrows-alt fullScreenIcon"></i>
-                        <i id="closeIcon" class="fas fa-times fullScreenIcon"></i>
+                        <i id="minIcon" class="far fa-window-minimize minimizeIcon" title="Minimize"></i>
+                        <i class="fas fa-arrows-alt fullScreenIcon" title="Full-screen"></i>
+                        <i id="closeIcon" class="fas fa-times fullScreenIcon" title="Close"></i>
                     </div>
-                    <div class="recipients">Recipients
-                        <input type="text" placeholder="To" id="txtTo" class="txtTo">
-                        <input type="text" placeholder="Cc Bcc" id="txtCc" class="txtCcBcc">
-                    </div>
-                    <div class="composeSubject">
-                        <input type="text" name="subjectBox" placeholder="Subject" class="comSubTxt">
-                    </div>
-                    <textarea name="mailBody" id="txtMailBody" cols="50" rows="20" class="comMailBody"></textarea>
-                    <div>
-                        <button class="btnSend">Send</button>
-                        <i class="fas fa-paperclip attachFiles" title="Attach files"></i> 
-                        <i class="fas fa-link insertLinks" title="insert links"></i> 
-                        <i class="far fa-smile emoji" title="Insert Emoji"></i> 
-                        <i class="fab fa-google-drive drive" title="Insert files using Drive"></i> 
-                        <i class="far fa-image insertImage" title="Insert Image"></i>
-                        <i class="fas fa-trash binIcon discardDraft" title="Discard draft"></i> 
-                        <i class="fas fa-ellipsis-v moreOptions" title="More options"></i>
+                    <div id="compMail">
+                        <div class="recipients">Recipients
+                            <input type="text" placeholder="To" id="txtTo" class="txtTo">
+                            <input type="text" placeholder="Cc Bcc" id="txtCc" class="txtCcBcc">
+                        </div>
+                        <div class="composeSubject">
+                            <input type="text" name="subjectBox" placeholder="Subject" class="comSubTxt">
+                        </div>
+                        <textarea name="mailBody" id="txtMailBody" cols="50" rows="20" class="comMailBody"></textarea>
+                        <div>
+                            <button class="btnSend">Send</button>
+                            <i class="fas fa-paperclip attachFiles" title="Attach files"></i> 
+                            <i class="fas fa-link insertLinks" title="insert links"></i> 
+                            <i class="far fa-smile emoji" title="Insert Emoji"></i> 
+                            <i class="fab fa-google-drive drive" title="Insert files using Drive"></i> 
+                            <i class="far fa-image insertImage" title="Insert Image"></i>
+                            <i class="fas fa-trash binIcon discardDraft" title="Discard draft"></i> 
+                            <i class="fas fa-ellipsis-v moreOptions" title="More options"></i>
+                        </div>
                     </div>
                 </form>
             </div>
