@@ -384,6 +384,11 @@
     .closeMailBox {
         display: none;
     }
+
+    /* input:checked {
+        opacity: 0.9;
+        font-weight: bold;
+    } */
 </style>
 <script>
     function changeBackground(x)
@@ -437,9 +442,9 @@
                         <button id="btnRead" class="btnRdUnR">Read</button>
                         <button id="btnUnRead" class="btnRdUnR">Unread</button>
                     </div>
-                    <div class="mailInbox">
-                        <div id="unrdDiv1" class="mailBody unreadMailBg" name="allMailDiv">
-                            <input id="chkbx1" type="checkbox" class="chkbox">
+                    <div class="mailInbox"> <!--Parent-->
+                        <div id="unrdDiv1" class="mailBody unreadMailBg" name="allMailDiv"> <!--Child-->
+                            <input id="chkbx1" type="checkbox" class="chkbox"> <!--Grandchild-->
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">PharmEasy HR</div>
                             <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
