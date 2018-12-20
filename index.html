@@ -16,6 +16,11 @@
         top: 0;
         overflow-x: hidden;
     } */
+    
+    .leftDiv {
+        margin-top: 8%;
+        padding-left: 10%;
+    }
 
     .left {
         color: black;
@@ -43,7 +48,7 @@
     }
 
     .appsIcon {
-        color: black;
+        color: white;
     }
 
     .btnCompose {
@@ -116,7 +121,7 @@
 
     .notificationIcon {
         padding-left: 15px;
-        color: black;
+        color: white;
     }
 
     .search {
@@ -141,30 +146,18 @@
         padding-left: 15px;
     }
 
-    .mailFromUnread {
-        font-weight: bold;
+    .mailFrom {
         padding-left: 15px;
-    }
-
-    .mailFromRead {
-        font-weight: normal;
-        padding-left: 15px;
-    }
-
-    .leftDiv {
-        margin-top: 8%;
-        padding-left: 10%;
-    }
-
-    .arcIcon {
-        visibility: hidden;
-        margin-left: 120px;
-        position: absolute;
+        display: inline-flex;
+        width: 10%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .archiveIcon {
         visibility: hidden;
-        margin-left: 160px;
+        margin-left: 6%;
         position: absolute;
     }
 
@@ -177,40 +170,36 @@
         line-height: 30px;
         background-color: #FFFFFF;
         color: black;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .mailBgOpa {
         opacity: 0.7;
+        font-weight: normal;
     }
 
     .unreadMailBg {
         opacity: 0.9;
+        font-weight: bold;
     }
 
     .mailBody:hover .archiveIcon,
-    .mailBody:hover .trashIcon,
-    .mailBody:hover .arcIcon{
+    .mailBody:hover .trashIcon {
         visibility: visible;
     }
 
     .subject {
-        padding-left: 100px;
-        font-weight: bold;
-    }
-
-    .readSub {
-        margin-left: 12%;
-        font-weight: normal;
-    }
-
-    .subjectRead {
-        margin-left: 12%;
-        font-weight: normal;
-    }
-
-    .unreadSubj {
-        padding-left: 100px;
-        font-weight: bold;
+        margin-left: 8%;
+        display: inline-flex;
+        width: 50%;
+        margin-right: 8%;
+        padding-left: 2px;
+        padding-right: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .mailInbox {
@@ -268,6 +257,7 @@
 
     .mainMenuPadding  {
         padding-left:15px;
+        color: white;
     }
 
     .fullScreenIcon {
@@ -363,17 +353,11 @@
         padding-left: 20px;
     }
 
-    .mailBodyUnRDate {
-        margin-left: 13%;
-        font-weight: bold;
-    }
-
     .mailBodyDate {
-        margin-left: 198px;
+        margin-left: 11%;
     }
 
-    .mailBody:hover .mailBodyDate,
-    .mailBody:hover .mailBodyUnRDate {
+    .mailBody:hover .mailBodyDate {
         visibility: hidden;
     }
 
@@ -399,17 +383,6 @@
 
     .closeMailBox {
         display: none;
-    }
-
-    .read {
-        opacity: 0.7;
-        /* padding-left: 100px; */
-        font-weight: normal;
-    }
-
-    .unread {
-        opacity: 0.9;
-        font-weight: bold;
     }
 </style>
 <script>
@@ -465,23 +438,11 @@
                         <button id="btnUnRead" class="btnRdUnR">Unread</button>
                     </div>
                     <div class="mailInbox">
-                        <div id="div1" class="mailBody unreadMailBg">
+                        <div id="unrdDiv1" class="mailBody unreadMailBg" name="allMailDiv">
                             <input id="chkbx1" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="mailFromUnread">PharmEasy HR</span>
-                            <span class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
-                            <span class="arcIcon">
-                                <i class="fas fa-archive"></i>
-                                <i class="fas fa-trash trashIcon"></i>
-                                <i class="far fa-clock trashIcon"></i>
-                            </span>
-                            <span class="mailBodyUnRDate">Dec 14</span>
-                        </div>
-                        <div id="div2" class="mailBody mailBgOpa">
-                            <input id="chkbx2" type="checkbox" class="chkbox">
-                            <i class="far fa-star spaceTD"></i>
-                            <span class="mailFromRead">Some text</span>
-                            <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
+                            <div class="mailFrom">PharmEasy HR</div>
+                            <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
@@ -489,11 +450,23 @@
                             </span>
                             <span class="mailBodyDate">Dec 14</span>
                         </div>
-                        <div id="div3" class="mailBody mailBgOpa">
+                        <div id="rdDiv1" class="mailBody mailBgOpa" name="allMailDiv">
+                            <input id="chkbx2" type="checkbox" class="chkbox">
+                            <i class="far fa-star spaceTD"></i>
+                            <div class="mailFrom">Some text</div>
+                            <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
+                            <span class="archiveIcon">
+                                <i class="fas fa-archive"></i>
+                                <i class="fas fa-trash trashIcon"></i>
+                                <i class="far fa-clock trashIcon"></i>
+                            </span>
+                            <span class="mailBodyDate">Dec 14</span>
+                        </div>
+                        <div id="rdDiv2" class="mailBody mailBgOpa" name="allMailDiv">
                             <input id="chkbx3" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="mailFromRead">Some text</span>
-                            <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
+                            <div class="mailFrom">Some text</div>
+                            <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
@@ -501,11 +474,11 @@
                             </span>
                             <span class="mailBodyDate">Dec 10</span>
                         </div>
-                        <div id="div4" class="mailBody mailBgOpa">
+                        <div id="rdDiv3" class="mailBody mailBgOpa" name="allMailDiv">
                             <input id="chkbx4" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="mailFromRead">Some text</span>
-                            <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
+                            <div class="mailFrom">Some text</div>
+                            <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
@@ -513,11 +486,11 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
-                        <div id="div5" class="mailBody mailBgOpa">
+                        <div id="rdDiv4" class="mailBody mailBgOpa" name="allMailDiv">
                             <input id="chkbx5" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="mailFromRead">Some text</span>
-                            <span class="subjectRead">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
+                            <div class="mailFrom">Some text</div>
+                            <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
                             <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
@@ -525,17 +498,17 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
-                        <div id="div1" class="mailBody unreadMailBg">
+                        <div id="unrdDiv2" class="mailBody unreadMailBg" name="allMailDiv">
                             <input id="chkbx6" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
-                            <span class="mailFromUnread">PharmEasy HR</span>
-                            <span class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</span>
-                            <span class="arcIcon">
+                            <div class="mailFrom">PharmEasy HR</div>
+                            <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
+                            <span class="archiveIcon">
                                 <i class="fas fa-archive"></i>
                                 <i class="fas fa-trash trashIcon"></i>
                                 <i class="far fa-clock trashIcon"></i>
                             </span>
-                            <span class="mailBodyUnRDate">Dec 14</span>
+                            <span class="mailBodyDate">Dec 14</span>
                         </div>
                     </div>
                 </div>
