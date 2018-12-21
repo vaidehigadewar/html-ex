@@ -385,10 +385,12 @@
         display: none;
     }
 
-    /* input:checked {
-        opacity: 0.9;
-        font-weight: bold;
-    } */
+    .btnToggle {
+        width: 60px;
+        margin-left: 2%;
+        height: 30px;
+        border-radius: 4px;
+    }
 </style>
 <script>
     function changeBackground(x)
@@ -439,11 +441,12 @@
                         <span class="chkbxMargin"><input type="checkbox" class="chkbox"></span>
                         <i class="fas fa-redo-alt refresh"></i>
                         <i class="fas fa-ellipsis-v refresh"></i>
-                        <button id="btnRead" class="btnRdUnR">Read</button>
-                        <button id="btnUnRead" class="btnRdUnR">Unread</button>
+                        <!-- <button id="btnRead" class="btnRdUnR">Read</button>
+                        <button id="btnUnRead" class="btnRdUnR">Unread</button> -->
+                        <button id="btnToggle" class="btnToggle">Toggle</button>
                     </div>
                     <div class="mailInbox"> <!--Parent-->
-                        <div id="unrdDiv1" class="mailBody unreadMailBg" name="allMailDiv"> <!--Child-->
+                        <div id="unrdDiv1" class="mailBody" name="allMailDiv"> <!--Child--> <!--This is my unread mail-->
                             <input id="chkbx1" type="checkbox" class="chkbox"> <!--Grandchild-->
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">PharmEasy HR</div>
@@ -455,8 +458,8 @@
                             </span>
                             <span class="mailBodyDate">Dec 14</span>
                         </div>
-                        <div id="rdDiv1" class="mailBody mailBgOpa" name="allMailDiv">
-                            <input id="chkbx2" type="checkbox" class="chkbox">
+                        <div id="rdDiv1" class="mailBody" name="allMailDiv"> <!--Child Sibling--> <!--This is my read mail-->
+                            <input id="chkbx2" type="checkbox" class="chkbox"> <!--Grandchild-->
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">Some text</div>
                             <div class="subject">PharmEasy Wishes Amit Tiwari, Swapnil Gusani And Ravi Shrivastava A Very Happy Birthday !!!!</div>
@@ -467,7 +470,7 @@
                             </span>
                             <span class="mailBodyDate">Dec 14</span>
                         </div>
-                        <div id="rdDiv2" class="mailBody mailBgOpa" name="allMailDiv">
+                        <div id="rdDiv2" class="mailBody" name="allMailDiv"> <!--Child Sibling-->
                             <input id="chkbx3" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">Some text</div>
@@ -479,7 +482,7 @@
                             </span>
                             <span class="mailBodyDate">Dec 10</span>
                         </div>
-                        <div id="rdDiv3" class="mailBody mailBgOpa" name="allMailDiv">
+                        <div id="rdDiv3" class="mailBody" name="allMailDiv"> <!--Child Sibling-->
                             <input id="chkbx4" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">Some text</div>
@@ -491,7 +494,7 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
-                        <div id="rdDiv4" class="mailBody mailBgOpa" name="allMailDiv">
+                        <div id="rdDiv4" class="mailBody" name="allMailDiv"> <!--Child Sibling-->
                             <input id="chkbx5" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">Some text</div>
@@ -503,7 +506,7 @@
                             </span>
                             <span class="mailBodyDate">Dec 7</span>
                         </div>
-                        <div id="unrdDiv2" class="mailBody unreadMailBg" name="allMailDiv">
+                        <div id="unrdDiv2" class="mailBody" name="allMailDiv"> <!--Child Sibling-->
                             <input id="chkbx6" type="checkbox" class="chkbox">
                             <i class="far fa-star spaceTD"></i>
                             <div class="mailFrom">PharmEasy HR</div>
