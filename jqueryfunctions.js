@@ -4,7 +4,8 @@ $(document).ready(function(){
     });
 
     $("#closeIcon").click(function(){
-        $("#frmComposeMail").addClass("closeMailBox");
+        // $(".composeMailBox").addClass("closeMailBox");
+        $(".composeMailBox").hide();
     });
 
     $("#btnUnRead").click(function(){
@@ -16,11 +17,20 @@ $(document).ready(function(){
     });
 
     $("#btnToggle").click(function(){
-        // $(".mailBody input[type='checkbox']:checked").closest('.mailBody').toggleClass('unreadMailBg');
-        $(".mailBody input[type='checkbox']:checked").closest('.mailBody').addClass('mailBgOpa').removeClass('unreadMailBg');
+        $("div.unreadMailBg input[type='checkbox']:checked").closest('.mailBody').addClass('mailBgOpa').removeClass('unreadMailBg');
         $(".mailBody input[type='checkbox']:checked").prop('checked',false);
-        $(".mailBody input[type='checkbox']:checked").each(function(){
-            $(".mailBody input[type='checkbox']:checked").closest('.mailBody').removeClass('mailBgOpa').addClass('unreadMailBg');
-        })
+        $("#chkAll").prop('checked',false);
+    });
+    
+    $("#btnCompose").click(function(){
+        $(".composeMailBox").show();
+    });
+
+    $("#chkAll").click(function(){
+        $(".chkbox").prop("checked", this.checked);
+    });
+
+    $(".fa-trash").click(function(){
+        $(this).closest('.mailBody').remove();
     });
 });
