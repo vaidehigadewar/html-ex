@@ -77,6 +77,7 @@
         background-color: white;
         right: 75px;
         bottom:0;
+        display: none;
     }
 
     .subjectBox {
@@ -144,6 +145,7 @@
 
     .spaceTD {
         padding-left: 15px;
+        cursor: pointer;
     }
 
     .mailFrom {
@@ -173,6 +175,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        opacity: 0.7;
     }
 
     .mailBgOpa {
@@ -425,7 +428,7 @@
         </div>
         <div class="mainDiv">
             <div class="left">
-                <button class="btnCompose">Compose</button>
+                <button id="btnCompose" class="btnCompose">Compose</button>
                 <div class="leftDiv">
                     <div><i class="fas fa-inbox inboxPadding"></i>Inbox</div>
                     <div><i class="far fa-star inboxPadding"></i>Starred</div>
@@ -438,7 +441,7 @@
             <div class="center">
                 <div class="upperMailDiv">
                     <div class="chkDiv">
-                        <span class="chkbxMargin"><input type="checkbox" class="chkbox"></span>
+                        <span class="chkbxMargin"><input type="checkbox" id="chkAll" class="chkbox"></span>
                         <i class="fas fa-redo-alt refresh"></i>
                         <i class="fas fa-ellipsis-v refresh"></i>
                         <!-- <button id="btnRead" class="btnRdUnR">Read</button>
