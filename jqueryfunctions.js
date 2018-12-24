@@ -17,5 +17,7 @@ $(document).ready(function(){
 
     $("#btnToggle").click(function(){
         $(".mailBody input[type='checkbox']:checked").closest('.mailBody').toggleClass('unreadMailBg');
+
+        $(".mailBody input[type='checkbox']:checked").prop('checked',false);
     });
 });
