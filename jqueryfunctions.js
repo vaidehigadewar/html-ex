@@ -17,7 +17,10 @@ $(document).ready(function(){
     });
 
     $("#btnToggle").click(function(){
-        $("div.unreadMailBg input[type='checkbox']:checked").closest('.mailBody').addClass('mailBgOpa').removeClass('unreadMailBg');
+        var unreadMail = $(".mailBody.unreadMailBg input[type='checkbox']:checked").closest('.mailBody');
+        var readMail = $(".mailBody.mailBgOpa input[type='checkbox']:checked").closest('.mailBody');
+        unreadMail.addClass('mailBgOpa').removeClass('unreadMailBg');
+        readMail.addClass('unreadMailBg').removeClass('mailBgOpa');
         $(".mailBody input[type='checkbox']:checked").prop('checked',false);
         $("#chkAll").prop('checked',false);
     });
